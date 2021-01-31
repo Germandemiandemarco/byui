@@ -1,15 +1,10 @@
 
-from game.
-from game.
-from game.
-
 import random
 
 
 class Board:
 
     def __init__(self):
-        self._prepare()
         self.hint = "****"
         self.guess = "----"
         
@@ -19,18 +14,15 @@ class Board:
     
     def _prepare(self, player):
 
-"""
-    Comments belong here
-"""
         name = player.get_name()
         code = str(random.randint(1000, 10000))
         self._items[name] = [code, guess, hint]
     
     def _create_hint(self, code, guess):
 
-"""
-    Comments belong here
-"""
+        """
+         Comments belong here
+        """
         hint = ""
         for index, letter in enumerate(guess):
             if code[index] == letter:
